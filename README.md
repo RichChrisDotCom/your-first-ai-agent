@@ -22,7 +22,7 @@ About 30 seconds from clone to a working agent.
 
 Everything else in a production agent — memory, evals, multiple agents, guardrails — is built *around* this loop. Understand these 107 lines and you understand what every agent framework is actually doing for you.
 
-Three things worth noticing in the code:
+Four things worth noticing in the code:
 
 - **The assistant turn is appended verbatim.** The `tool_use` blocks are what the next request needs. Strip them and the loop breaks.
 - **Every tool result goes back in a single user message.** One message, all results, in order.
